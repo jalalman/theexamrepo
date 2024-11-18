@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'allpies.css'%}">
+    <title>all Pies</title>
 </head>
 <body>
+    <div class="nav"> <a href="{% url 'logout' %}" class="" data-mdb-ripple-init>logout</a></div>
+    <div class="cont">
     <table>
         <tr>
             <th>Name</th>
@@ -13,13 +17,17 @@
         </tr>
         {% for pie in pies%}
         <tr>
-            <td>{{pie.name}}</td>
+            <td><a href="{% url 'pieview' pie.id%}">{{pie.name}}</a></td>
             <td>{{pie.users.first_name}}</td>
             
         </tr>
         {% endfor %}
         
     </table>
-    <a href="{% url 'logout' %}" class="" data-mdb-ripple-init>logout</a>
+</div>
+<div class="back">
+    <a href="{% url 'suclogin' %}"> &lt-back to my Pies</a>
+</div>
+    
 </body>
 </html>

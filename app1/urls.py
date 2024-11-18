@@ -11,5 +11,6 @@ urlpatterns=[
     path('editpieview/<int:id>',views.editpieview,name="editpieview"),
     path('editpie',views.editpie,name='editpie'),
     path('deletepie/<int:id>',views.deletepie,name="deletepie"),
-    path('allpies',views.allpies,name='allpies')
+    path('allpies',views.allpies,name='allpies'),
+    path('pieview/<int:id>',views.pieview,name='pieview')
 ]

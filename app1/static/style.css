@@ -40,3 +40,16 @@
     text-transform: capitalize;
     color: cornflowerblue;
 }
+
+.nav{
+    display: flex;
+    width: 100%;
+    
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+.back{
+    width: 90%;
+    margin: 0 auto;
+}

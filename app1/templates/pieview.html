@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'pieview.css'%}">
+    <title>view</title>
+</head>
+<body>
+    <div class="nav"> <a href="{% url 'logout' %}" class="" data-mdb-ripple-init>logout</a></div>
+    <div class="cont">
+        <div>
+            <h1>{{pie.name}}</h1>
+            <h3>By {{pie.users.first_name}}</h3>
+        </div>
+        
+        <p>{{pie.filling}} and {{pie.crust}}</p>
+    </div>
+    <div class="back">
+        <a href="{% url 'suclogin' %}"> &lt-back to my Pies</a>
+    </div>
+</body>
+</html>

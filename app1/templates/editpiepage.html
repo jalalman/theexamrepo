@@ -9,9 +9,10 @@
     <title>edit</title>
 </head>
 <body>
+    <div class="nav"> <a href="{% url 'logout' %}" class="" data-mdb-ripple-init>logout</a></div>
     <div class="cont">
     <div class="reg-cont">
-        <h1>Registration</h1>
+        <h1>edit {{pie.name}} pie</h1>
 
         <form action="/editpie" method="post">
             {% csrf_token %}
@@ -35,7 +36,8 @@
     </div>
     
 </div>
-<a href="{% url 'suclogin' %}"> -back to my Pies</a>
+<div class="back"><a href="{% url 'suclogin' %}"> &lt-back to my Pies</a></div>
+
 
 </body>
 </html>

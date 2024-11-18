@@ -61,7 +61,7 @@ def addnewpie(request):
             for key,value in errors.items():
                 messages.error(request,value)
 
-            return redirect('/addnewpie')
+            return redirect('/success')
 
         else:
             models.addpie(request.POST)
@@ -99,3 +99,13 @@ def allpies(request):
 
 
     return render(request,'allpies.html',context)
+
+
+def pieview(request,id):
+
+    context={
+        'pie':Pie.objects.get(id=id)
+    }
+
+
+    return render(request,'pieview.html',context)
